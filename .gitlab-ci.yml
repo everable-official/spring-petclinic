@@ -11,10 +11,14 @@ build:
     - docker rm java_db_1 || true
     - docker rm java_java_1 || true
     - docker-compose up -d --build
+  tags:
+    - shell 
 
 checklogs:
   stage: checklogs
   script:
     - docker logs java_application
   when: manual  
+  tags:
+    - shell 
 
