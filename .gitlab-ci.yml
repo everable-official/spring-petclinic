@@ -1,0 +1,20 @@
+stages:
+  - build
+  - checklogs
+
+build:
+  stage: build
+  script:
+    - docker-compose down
+    - docker kill java_db_1 || true
+    - docker kill java_java_1 || true
+    - docker rm java_db_1 || true
+    - docker rm java_java_1 || true
+    - docker-compose up -d --build
+
+checklogs:
+  stage: checklogs
+  script:
+    - docker logs java_application
+  when: manual  
+
