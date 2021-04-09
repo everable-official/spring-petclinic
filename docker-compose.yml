@@ -20,7 +20,4 @@ services:
       - ./src/main/resources/db/mysql:/docker-entrypoint-initdb.d
     environment:
       MYSQL_ROOT_PASSWORD: lechery-spangle-tucson-marina-psaltery
-      MYSQL_USER: petclinic
-      MYSQL_PASSWORD: petclinic
-      MYSQL_DATABASE: petclinic
 

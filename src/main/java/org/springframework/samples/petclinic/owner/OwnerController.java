@@ -97,7 +97,7 @@ class OwnerController {
 		else if (results.size() == 1) {
 			// 1 owner found
 			owner = results.iterator().next();
-			return "redirect:/owners/" + owner.getId();
+			return "redirect:/app/owners/" + owner.getId();
 		}
 		else {
 			// multiple owners found
@@ -122,7 +122,7 @@ class OwnerController {
 		else {
 			owner.setId(ownerId);
 			this.owners.save(owner);
-			return "redirect:/owners/{ownerId}";
+			return "redirect:/app/owners/{ownerId}";
 		}
 	}
 

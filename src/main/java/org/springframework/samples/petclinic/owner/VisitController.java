@@ -85,7 +85,7 @@ class VisitController {
 		}
 		else {
 			this.visits.save(visit);
-			return "redirect:/owners/{ownerId}";
+			return "redirect:/app/owners/{ownerId}";
 		}
 	}
 
